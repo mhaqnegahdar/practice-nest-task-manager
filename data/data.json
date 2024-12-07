@@ -15,8 +15,15 @@
     "id": "e42fa9fa-25be-461f-a41b-fad99725f2b4"
   },
   {
+    "id": "9bf2db9f-4768-4169-ac58-c4870344698b",
     "title": "Title 4",
     "description": "Description",
-    "id": "9bf2db9f-4768-4169-ac58-c4870344698b"
+    "status": "In Progress"
+  },
+  {
+    "title": "Title 4",
+    "description": "Description",
+    "id": "cc177501-8b7b-40fd-9a7c-7f947823bbe9",
+    "status": "Not Started"
   }
 ]

@@ -4,6 +4,7 @@ import {
   Delete,
   Get,
   Param,
+  ParseUUIDPipe,
   Patch,
   Post,
 } from '@nestjs/common';
@@ -26,7 +27,7 @@ export class TasksController {
   }
 
   @Get(':id')
-  async findOne(@Param('id') id: string): Promise<Task> {
+  async findOne(@Param('id', new ParseUUIDPipe()) id: string): Promise<Task> {
     return await this.tasksService.findOne(id);
   }
 
@@ -36,7 +37,7 @@ export class TasksController {
   }
 
   @Delete(':id')
-  async remove(@Param('id') id: string): Promise<Task[]> {
+  async remove(@Param('id', new ParseUUIDPipe()) id: string): Promise<Task[]> {
     return await this.tasksService.remove(id);
   }
 }

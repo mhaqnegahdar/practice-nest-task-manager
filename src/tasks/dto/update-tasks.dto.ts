@@ -1,6 +1,16 @@
+import { IsEnum, IsNotEmpty, IsUUID } from 'class-validator';
+import { TaskStatus } from '../task.model';
+
 export class UpdateTaskDto {
+  @IsUUID()
   id: string;
+
+  @IsNotEmpty()
   title: string;
+
+  @IsNotEmpty()
   description: string;
-  status: 'Not Started' | 'In Progress' | 'Done';
+
+  @IsEnum(TaskStatus)
+  status: TaskStatus;
 }
