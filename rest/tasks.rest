@@ -1,0 +1,21 @@
+### Create 
+POST http://localhost:3000/tasks
+content-type: application/json
+
+{
+    "title": "Title 4",
+    "description": "Description"
+}
+
+### Get All
+GET http://localhost:3000/tasks
+
+
+
+### Get One
+GET http://localhost:3000/tasks/ca208bdb-95c8-4dd8-b088-a474b38495a5
+
+### Delete One
+DELETE http://localhost:3000/tasks/ca208bdb-95c8-4dd8-b088-a474b38495a5
+
+
